@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from matplotlib import font_manager, rc
 
-from pandas_study.data_structure.set_dis import set_dis
+from data_structure.set_dis import set_dis
 
 df = pd.read_excel('./시도별 전출입 인구수.xlsx',fillna=0, header=0)
 

@@ -25,28 +25,30 @@ sr_one = df_seoul.loc['경기도']
 # 스타일 서식 지정
 plt.style.use('ggplot')
 
-fig = plt.figure(figsize=(20,5))
+fig = plt.figure(figsize=(16,14))
 fig.subplots_adjust(left=0.2,right=0.8,bottom=0.2,top=0.87,wspace=0.3,hspace=0.5)
-ax = fig.add_subplot(1,1,1)
+ax1 = fig.add_subplot(2,1,1)
+ax2 = fig.add_subplot(2,1,2)
 
-ax.plot(sr_one,marker='o',markerfacecolor='orange',markersize=5,color='olive',linewidth=2,label='서울->경기')
-ax.legend(loc='best')
+ax1.plot(sr_one,'o',markersize=5)
+ax2.plot(sr_one,marker='o',markerfacecolor='orange',markersize=5,color='olive',linewidth=2,label='서울->경기')
+ax2.legend(loc='best')
 
 #y축 범위 지정(최소,최대)
-ax.set_ylim(50000,800000)
-
-#차트 제목
-ax.set_title('서울 -> 경기 인구 이동')
+ax1.set_ylim(50000,800000)
+ax2.set_ylim(50000,800000)
 
 #축 이름 추가
-ax.set_xlabel('기간')
-ax.set_ylabel('이동인구수')
+ax1.set_xlabel('기간')
+ax1.set_ylabel('이동인구수')
+ax1.set_title('서울 -> 경기 인구 이동')
+
+ax2.set_xlabel('기간')
+ax2.set_ylabel('이동인구수')
+ax2.set_title('서울 -> 경기 인구 이동')
 
 #축 눈금 라벨 지정 및 75도 회전
-ax.set_xticklabels(sr_one.index,rotation=75)
-
-#축 눈금 라벨 크기
-ax.tick_params(axis="x",labelsize=10)
-ax.tick_params(axis="y",labelsize=10)
+ax1.set_xticklabels(sr_one.index,rotation=75)
+ax2.set_xticklabels(sr_one.index,rotation=75)
 
 plt.show()
