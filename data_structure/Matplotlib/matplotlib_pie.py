@@ -17,3 +17,4 @@ plt.title('Model Origin',size=20)
 plt.axis('equal')
 plt.legend(labels=df_origin.index,loc='upper right')
 plt.show()
+plt.subplot
