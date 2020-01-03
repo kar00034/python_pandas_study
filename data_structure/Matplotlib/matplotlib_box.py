@@ -2,7 +2,7 @@ import matplotlib
 import pandas as pd
 import matplotlib.pyplot as plt
 
-plt.style.use('seaborn-poster')
+plt.style.use('Seaborn-poster')
 matplotlib.rcParams['font.family'] = 'NanumGothic'
 matplotlib.rcParams['axes.unicode_minus'] = False
 
